@@ -20,8 +20,8 @@ import os
 import environ
 env = environ.Env(DEBUG=(bool, True))
 
-environ.Environ.read_env(
-    env_file = os.path.join(BASE_DIR, '.env')
+env.read_env(
+    env_file=os.path.join(BASE_DIR, '.env')
 )
 
 NEIS_KEY = env('NEIS_KEY')
@@ -42,6 +42,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework'
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -115,9 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/5.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ko-kr'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Seoul'
 
 USE_I18N = True
 
